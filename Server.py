@@ -6,7 +6,7 @@ from Utils import delete_noise, complete_message
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # Direccion y puerto del servidor
-server_address = ('localhost', 10000)
+server_address = ('localhost', 3000)
 
 print('Server run in', server_address[0], 'port', server_address[1])
 
@@ -33,11 +33,14 @@ while True:
             signed_message = str(private_key.sign(client_request, "")[0])
             complete_message_signed = complete_message(signed_message)
             connection.send(complete_message_signed.encode('utf-8'))
+            break
 
     except Exception as e:
         print(e)
         connection.close()
+        break
 
     finally:
         # Cerrando conexion
         connection.close()
+        break
