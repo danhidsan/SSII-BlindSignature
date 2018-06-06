@@ -23,7 +23,7 @@ while True:
         try:
             private_key_string = open('private.pem', "r").read()
             private_key = RSA.importKey(private_key_string)
-            print('concexion desde', client_address)
+            print('conexion desde', client_address)
 
             # Recibe los datos en trozos y reetransmite
 

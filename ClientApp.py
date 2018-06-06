@@ -81,19 +81,19 @@ class MainApp(App):
         layout = BoxLayout(padding=10, orientation='vertical')
 
         # Checkbox
-        label_btn1 = Label(text="option1")
+        label_btn1 = Label(text="AMC")
         layout.add_widget(self.btn1)
         layout.add_widget(label_btn1)
 
-        label_btn2 = Label(text="option2")
+        label_btn2 = Label(text="JML")
         layout.add_widget(self.btn2)
         layout.add_widget(label_btn2)
 
-        label_btn3 = Label(text="option3")
+        label_btn3 = Label(text="RMF")
         layout.add_widget(self.btn3)
         layout.add_widget(label_btn3)
 
-        label_btn4 = Label(text="option4")
+        label_btn4 = Label(text="LCD")
         layout.add_widget(self.btn4)
         layout.add_widget(label_btn4)
 
