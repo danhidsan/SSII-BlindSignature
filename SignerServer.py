@@ -8,14 +8,13 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # Direccion y puerto del servidor
 server_address = ('localhost', 3000)
 
-print('Server run in', server_address[0], 'port', server_address[1])
-
 # Incluimos la dirección y el puerto al socket
 sock.bind(server_address)
 
 # Iniciamos el listener
 sock.listen(1)
 
+print('Server run in', server_address[0], 'port', server_address[1])
 while True:
     print("Esperando conexion de cliente")
     connection, client_address = sock.accept()
@@ -38,7 +37,3 @@ while True:
         except Exception as e:
             print(e)
             connection.close()
-
-        #finally:
-            # Cerrando conexion
-            #connection.close()
